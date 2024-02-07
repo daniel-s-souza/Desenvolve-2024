@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 
   function pulaLinha() {
     document.write("<br><br>");
@@ -13,7 +13,7 @@
     
     var imc = peso / (altura ** 2);
     mostra("O imc calculado é: " + imc);
-    
+
   }
 
   var pesoDaniel = 110;
@@ -21,4 +21,36 @@
   calculaImc(pesoDaniel, alturaDaniel);
 
   mostra("O imc do Daniel é: " + imcDaniel);
+</script> -->
+
+<script>
+
+  function pulaLinha() {
+    document.write("<br><br>");
+  }
+
+  function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  function calculaImc(peso, altura) {
+    
+    var imc = peso / (altura ** 2);
+    return imc;
+
+  }
+
+  var pesoDaniel = 118;
+  var alturaDaniel = 1.71;
+  var imcDaniel = calculaImc(pesoDaniel, alturaDaniel);
+
+  var pesoAmigo = 85;
+  var alturaAmigo = 1.85;
+  var imcAmigo = calculaImc(pesoAmigo, alturaAmigo);
+
+  mostra(imcDaniel);
+  mostra(imcAmigo);
+
+  
 </script>
