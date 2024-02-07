@@ -1,3 +1,5 @@
+<!-- Resolução Primeiro Exercício -->
+
 <!-- <script>
 
   function pulaLinha() {
@@ -23,7 +25,10 @@
   mostra("O imc do Daniel é: " + imcDaniel);
 </script> -->
 
-<script>
+
+<!-- Resolução Segundo Exercício -->
+
+<!-- <script>
 
   function pulaLinha() {
     document.write("<br><br>");
@@ -51,6 +56,37 @@
 
   mostra(imcDaniel);
   mostra(imcAmigo);
+
+  
+</script> -->
+
+
+<!-- Resolução Terceiro Exercício -->
+
+<script>
+
+  function pulaLinha() {
+    document.write("<br><br>");
+  }
+
+  function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  function calculaImc(peso, altura) {
+    
+    var imc = peso / (altura ** 2);
+    return imc;
+
+  }
+
+  var nome = prompt("Digite seu nome:")
+  var peso = prompt(nome + " ,Informe seu peso:");
+  var altura = prompt(nome +" ,Informe seu altura:");
+  var imc = calculaImc(peso, altura);
+
+  mostra(nome + " ,o seu Imc é: " + imc);
 
   
 </script>
