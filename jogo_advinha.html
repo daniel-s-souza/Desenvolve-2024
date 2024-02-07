@@ -1,4 +1,6 @@
-<script>
+<!-- Primeira Resolução do exercício -->
+
+<!-- <script>
    function pulaLinha() {
     document.write("<br><br>");
   }
@@ -16,4 +18,30 @@
   } else {
     mostra("Você acertou!");
   }
+</script> -->
+
+<!-- Desafio 1 -->
+
+<script>
+  function pulaLinha() {
+   document.write("<br><br>");
+ }
+
+ function mostra(frase) {
+   document.write(frase);
+   pulaLinha();
+ }
+
+ function sorteia(n) {
+  Math.round(Math.random() * n)
+ }
+
+ var numeroPensado = sorteia(10);
+ var chute = parseInt(prompt("Digite o seu chute:"));
+
+ if(chute != numeroPensado) {
+   mostra("Você errou o número pensado era: " + numeroPensado);
+ } else {
+   mostra("Você acertou!");
+ }
 </script>
