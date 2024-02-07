@@ -1,6 +1,6 @@
 <!-- Resolução Primeiro Exercício -->
 
-<script>
+<!-- <script>
 
 function pulaLinha() {
     document.write("<br><br>");
@@ -16,4 +16,32 @@ function pulaLinha() {
   var pontos = (vitorias * 3) + empates;
 
   mostra("Os pontos do seu time é: " + pontos);
-</script>
+</script> -->
+
+<!-- Resolução Segundo Exercício -->
+
+<script>
+
+  function pulaLinha() {
+      document.write("<br><br>");
+    }
+  
+    function mostra(frase) {
+      document.write(frase);
+      pulaLinha();
+    }
+  
+    var vitorias = parseInt(prompt("Entre com o número de vitórias:")) 
+    var empates = parseInt(prompt("Entre com o número de empates:"))
+    var pontos = (vitorias * 3) + empates;
+     
+    mostra("Os pontos do seu time é: " + pontos);
+
+    if (pontos > 28) {
+      mostra("Seu time está melhor que ano passado");
+    } else if (pontos === 28) {
+      mostra("Seu time está igual ao ano passado")
+    } else {
+      mostra("Seu time está pior que ano passado")
+    }
+  </script>
