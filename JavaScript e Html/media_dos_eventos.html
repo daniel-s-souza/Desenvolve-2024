@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var totalDeEventos = parseInt(prompt("Informe o total de eventos"));
+
+    var contador = 1;
+    /* o correto:
+    var totalDeEventos = 0;
+    */
+
+    while(contador <= totalDeEventos) {
+
+/* o erro está na declaração da variavel totalGastoComEnventos dentro do bloco do while, deveria ter sido declarada fora para que ao laço de repetição ser executado ele não seja zerado novamente; */
+
+        var totalGastoComEventos = 0;
+        var gasto = parseInt(prompt("Informe total gasto com evento"));
+        totalGastoComEventos = totalGastoComEventos + gasto;
+        contador++;
+    }
+
+    var media = totalGastoComEventos / totalDeEventos;
+
+    mostra("A média de gastos é " + media);
+</script>
