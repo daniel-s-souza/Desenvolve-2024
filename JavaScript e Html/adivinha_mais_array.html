@@ -5,7 +5,40 @@
 
 <script>
 
-  var segredos = [5,7,10,2];
+  function sorteia() {
+    return Math.round(Math.random() * 10);
+  }
+  
+  function sorteiaNumeros(quantidade) {
+      var segredos = [];
+      var contador = 1;
+
+      while(contador <= quantidade) {
+        var numAleatorio = sorteia();
+
+        if(numAleatorio != 0) {
+
+          var achou = false;
+          
+            for(var posicao = 0; posicao < segredos.      length; posicao++){
+              if(segredos[posicao] == numAleatorio){
+                achou = true;
+                break;
+          }
+        }
+          
+            if(achou == false) {
+              segredos.push(numAleatorio);
+          }
+          
+          contador++;
+        }
+    }
+
+      return segredos;
+  }
+
+  var segredos = sorteiaNumeros(5);
   var input = document.querySelector('input');
   input.focus();
   
@@ -22,7 +55,7 @@
     if(achou == false) {
       alert("Você errou!")
     }
-    
+
     input.value= "";
     input.focus();
   }
